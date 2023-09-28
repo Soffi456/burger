@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: rgb(12, 12, 12);
+    text-decoration: none;
+}
+
+body {
+    font-family: Arial;
+    /* background-image: url(background1.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh; */
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    align-items: center;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1000px;
+    padding: 0 15px;
+}
+
+.header .container {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 65px;
+}
+
+/* .header{
+    padding: 100px 0px 100px 0px;
+} */
+.menu-item .link {
+    color: rgb(245, 240, 240);
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.menu-item .link:hover {
+    color: aquamarine;
+}
+
+.welcome {
+    margin-top: 100px;
+    color: rgb(255, 255, 255);
+}
+
+.welcome .container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 30px;
+    border-radius: 16px;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    background: #ffa5da;
+}
+
+.btn:hover {
+    color: aquamarine;
+}
+
+.title {
+    padding-bottom: 20px;
+    max-width: 500px;
+    font-size: 56px;
+}
+
+.text {
+    padding-bottom: 40px;
+    max-width: 500px;
+    font-size: 18px;
+}
+
+.bg-image {
+    position: absolute;
+    z-index: -1;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@media (min-width: 768px) {
+    .burger {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .title {
+        max-width: 100%;
+        font-size: 24px;
+    }
+
+    button {
+        background: none;
+        border: none;
+    }
+
+    .burger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 24px;
+        width: 40px;
+        z-index: 50;
+    }
+
+    .burger span {
+        height: 4px;
+        width: 100%;
+        background: white;
+        border-radius: 5px;
+    }
+
+    .text {
+        min-width: 100%;
+        font-size: 16PX;
+    }
+
+    .menu {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: -100%;
+        display: flex;
+        flex-direction: column;
+        background: black;
+        padding-top: 100px;
+        transition: all 0.3s ease 0s;
+
+    }
+.menu.active{
+    left: 0;
+}
+    .header .container {
+        padding-top: 15px;
+
+    }
+
+    .welcome {
+        margin-top: 50px;
+    }
+}
